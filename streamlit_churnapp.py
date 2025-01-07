@@ -1,13 +1,9 @@
 import streamlit as st
 import joblib
 import pandas as pd
-
-# Load the trained model
-try:
-    model = joblib.load('churning_model.pkl')
-    print("Model loaded successfully!")
-except Exception as e:
-    print(f"Error loading model: {e}")
+import pickle
+with open('churning_model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 
 # Inspect the features the model expects
