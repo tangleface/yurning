@@ -3,7 +3,12 @@ import joblib
 import pandas as pd
 
 # Load the trained model
-model = joblib.load('churning_model.pkl')
+try:
+    model = joblib.load('churning_model.pkl')
+    print("Model loaded successfully!")
+except Exception as e:
+    print(f"Error loading model: {e}")
+
 
 # Inspect the features the model expects
 expected_features = model.feature_names_in_
