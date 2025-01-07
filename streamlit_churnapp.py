@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 # Load the trained model
-model = joblib.load('C:/Users/nabil/Downloads/expressochurn/churning_model.pkl')
+model = joblib.load('churning_model.pkl')
 
 # Inspect the features the model expects
 expected_features = model.feature_names_in_
