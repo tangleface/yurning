@@ -5,7 +5,7 @@ import pickle
 import os
 
 # Load the model
-file_path = r'C:\Users\nabil\Downloads\expressochurn\churning_model.pkl'
+file_path = r'churning_model.pkl'
 if not os.path.exists(file_path):
     st.error(f"Model file not found at: {file_path}")
     st.stop()
